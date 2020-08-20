@@ -36,6 +36,8 @@ def oep_numbers(*args, key):
         return list(filter(lambda val: val % 2 == key, args))
     elif key ==PRIME:
         return list(filter(lambda val: prime_number(val) == True, args))
+    else:
+        return list(args)
 
 print (my_pow(1, 2, 3, 4, 5, 6, 7, 8, 9))                       
 # [1, 4, 9, 16, 25, 36, 49, 64, 81]
@@ -49,5 +51,7 @@ print (oep_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9, key = ODD))
 print (oep_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9, key = EVEN))      
 # [2, 4, 6, 8]
 
-print (oep_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9, key = PRIME))     
+print (oep_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9, key = PRIME))
 # 1, 2, 3, 5, 7]
+
+print (oep_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9, key = 3))
