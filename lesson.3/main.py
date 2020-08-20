@@ -21,7 +21,7 @@ def prime_number(val):
     if val % 2 == 0:
         return val == 2
     num = 3
-    while num * num <= val and val % num != 0:
+    while pow(num, 2) <= val and val % num != 0:
         num += 2
     return pow(num, 2) > val
 
