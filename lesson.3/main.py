@@ -17,7 +17,7 @@ def time_decor(func, *args):
         return ret
     return wrapper
 
-def prime_num(val):
+def prime_number(val):
     if val % 2 == 0:
         return val == 2
     num = 3
@@ -35,7 +35,7 @@ def oep_numbers(*args, key):
     if key == EVEN or key == ODD:
         return list(filter(lambda val: val % 2 == key, args))
     elif key ==PRIME:
-        return list(filter(lambda val: prime_num(val) == True, args))
+        return list(filter(lambda val: prime_number(val) == True, args))
 
 print (my_pow(1, 2, 3, 4, 5, 6, 7, 8, 9))                       
 # [1, 4, 9, 16, 25, 36, 49, 64, 81]
